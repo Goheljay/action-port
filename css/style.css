@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Raleway:wght@500;600;700&display=swap');
+@import url("https://use.typekit.net/ojv4ekx.css");
+
+
+
+/* define custom css variable */
+/* Global section  */
+
+body{
+    font-size: 16px;
+    line-height: 2;
+    /* overflow: hidden; */
+    background-color: var(--bg-black-50);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Raleway', sans-serif; */
+}
+:before,:after{
+    box-sizing: border-box;
+}
+@keyframes h {
+    0% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 0.5rem;
+    }
+    to {
+      bottom: 0;
+    }
+  }
+a{
+    text-decoration: none !important;
+    color: var(--skin-color);
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img{
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+.text-primary {
+    color: #dc143c !important;
+}
+
+
+.home-section .full-screen,
+.about-section .full-screen,
+.edu-section .full-screen,
+.contact-section .full-screen {
+    padding: 50px 0;
+    min-height: 100vh;
+}
+
+.container{
+    max-width: 1300px;
+    /* background-color: rgba(255, 0, 0, 0.267); */
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.outer-shadow{
+    box-shadow: var(--outer-shadow );
+}
+.hover-in-shadow{
+    z-index: 1;
+    position: relative;
+}
+.hover-in-shadow:hover{
+    box-shadow: var(--outer-shadow-0);
+}
+
+.hover-in-shadow::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.hover-in-shadow:hover:after{
+    box-shadow: var(--inner-shadow);
+    border-radius: 50%;
+}
+
+.hovers-in-shadow{
+    z-index: 1;
+    position: relative;
+}
+.hovers-in-shadow:hover{
+    box-shadow: var(--outer-shadow-0);
+}
+
+.hovers-in-shadow::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.hovers-in-shadow:hover:after{
+    box-shadow: var(--inner-shadow);
+    border-radius: 30px;
+}
+.inner-shadow{
+    box-shadow: var(--inner-shadow);
+}
+.align-items-center{
+    align-items: center;
+}
+.btn-1{
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--skin-color);
+    background-color: transparent;
+    line-height: 1.5;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+/* ------------------------------------------------------------------- */
+
+/* header section */
+
+/* -------------------------------------------------------------------------------------- */
+.header{
+    padding: 20px 15px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.header .logo a{
+    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Raleway', sans-serif; */
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+    height: 40px;
+    width: 100px;
+    color: rgb(77, 77, 77);
+    font-weight: 600;
+}
+.header .logo a span{
+    color: var(--skin-color);
+}
+
+.header .hamburger-btn{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .hamburger-btn span{
+    /* margin-left: 10px; */
+    display: block;
+    height: 2px;
+    width: 16px;
+    background-color: var(--bg-black-900);
+    position: relative;
+}
+.header .hamburger-btn span:before,
+.header .hamburger-btn span:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: var(--bg-black-900);
+}
+
+.header .hamburger-btn span:before{
+    top: -6px;
+} 
+.header .hamburger-btn span::after{
+    top: 6px;
+} 
+/* ----------------------------------------------------------------------------- */
+
+/* navigation menu design */
+
+/* --------------------------------------------------------------------------------- */
+.nav-menu{
+    position: fixed;
+    background-color: var(--bg-black-50);
+    padding: 0 15px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    visibility: hidden;
+    opacity: auto;
+    overflow-y: auto;
+}
+.nav-menu .close-nav-menu{
+    height: 40px;
+    width: 40px;
+    display: block; 
+    font-size: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    text-align: center;
+    color: var(--text-black-600);
+    transition: all 0.3s ease;
+}
+
+.nav-menu .close-nav-menu::after{
+    border-radius: 50%;
+}
+.nav-menu-inner{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu ul{
+    padding: 20px;
+} 
+
+.nav-menu ul li{
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.nav-menu ul li:last-child{
+    margin-bottom: 0;
+}
+.nav-menu ul li a{
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-black-700);
+    padding: 5px 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.nav-menu ul li a.active{
+    color: var(--skin-color);
+}
+.nav-menu ul li a:after{
+    border-radius: -30px;
+}
+.nav-menu .copyright-text{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-size: 20px;
+    color: var(--text-black-600);
+    transform: translateY(-50%) rotate(-90deg);
+    left: -80px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Home page design  */
+
+/* ------------------------------------------------------------------------------- */
+
+.me{
+    height: 330px;
+    width: 330px;
+    margin-left: 150px;
+    border-radius: 50%;
+}
+
+.home-section .home-text,
+.home-section .home-img{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Poppins', sans-serif;  */
+    /* font-family: 'Raleway', sans-serif;*/
+}
+.home-section .home-text p{
+    color: var(--text-black-300);
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0;
+}
+.home-section .home-text h2{
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--bg-black-900);
+    margin: 0;
+}
+.home-section .home-text h1{
+    font-size: 30px;
+    font-weight: 530;
+    color: var(--text-black-900);
+    margin: 0;
+}
+.home-section .home-text span{
+    color: crimson;
+}
+.home-section .home-img .img-box{
+    background-color: red;
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    padding: 15px;
+}
+.home-section .home-img .img-box img{
+    width: 100%;
+    border-radius: 50%;
+    border: 10px solid transparent;
+}
+/* -------------------------------------------------------------------------- */
+
+/* About page design  */
+
+/* ------------------------------------------------------------------------------- */
+
+.about-section .about-text h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--text-black-900);
+    margin: 0;
+}
+.about-section .about-text span{
+    color: crimson;
+}
+.about-section .about-text ul li{
+    font-size: 19px;
+    font-weight: 100;
+    text-align: justify;
+}
+.about-section .about-text ul a {
+    color: crimson;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Skills page design  */
+
+/* ------------------------------------------------------------------------------- */
+
+.skill-section .skills-text h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--text-black-900);
+    margin: 0;
+}
+
+#skills .filter-button,
+#skills input[type="radio"] {
+    display: none;
+}
+#skills {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.skill-knowleadge {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills div {
+    padding: 0.2rem;
+    transition: opacity 0.5s;
+}
+
+#skills  .skill-knowleadge div[skill-type="language"] {
+    color: crimson;
+}
+
+#skills .skill-knowleadge div[skill-type="framework"] {
+    color: #2e2e2e;
+}
+
+#skills .skill-knowleadge div[skill-type="tool"] {
+    color: #7e3d24;
+}
+
+#skills .skill-knowleadge div[skill-weight="1"] {
+    font-size: 0.75rem;
+    line-height: 0.25rem;
+}
+
+#skills .skill-knowleadgediv[skill-weight="2"] {
+    font-size: 1.15rem;
+    line-height: 0.75rem;
+}
+
+#skills .skill-knowleadge div[skill-weight="3"] {
+    font-size: 1.55rem;
+    line-height: 1.25rem;
+}
+
+#skills .skill-knowleadge div[skill-weight="4"] {
+    font-size: 1.95rem;
+    line-height: 1.75rem;
+}
+
+#skills .skill-knowleadge div[skill-weight="5"] {
+    font-size: 2.35rem;
+    line-height: 2.25rem;
+}
+
+#skills input[type="radio"]:checked + .filter-button {
+    color: var(--skin-color);
+    font-weight: 1000;
+    box-shadow:  var(--inner-shadow);
+  }
+  #skills input[id="framework"]:checked ~ .skill-knowleadge div[skill-type="language"],
+  #skills input[id="framework"]:checked ~ .skill-knowleadge div[skill-type="tool"],
+  #skills input[id="language"]:checked ~ .skill-knowleadge div[skill-type="framework"],
+  #skills input[id="language"]:checked ~ .skill-knowleadge div[skill-type="tool"],
+  #skills input[id="tool"]:checked ~ .skill-knowleadge div[skill-type="framework"],
+  #skills input[id="tool"]:checked ~ .skill-knowleadge div[skill-type="language"] {
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    width: 0;
+  }
+
+@media only screen and (min-width: 48em) {
+  #skills div[skill-weight="1"] {
+    font-size: 1rem;
+    line-height: 0;
+  }
+  #skills .skill-knowleadge div[skill-weight="2"] {
+    font-size: 2rem;
+    line-height: 1rem;
+  }
+  #skills .skill-knowleadge div[skill-weight="3"] {
+    font-size: 3rem;
+    line-height: 2rem;
+  }
+  #skills.skill-knowleadge  div[skill-weight="4"] {
+    font-size: 4rem;
+    line-height: 3rem;
+  }
+  #skills .skill-knowleadge div[skill-weight="5"] {
+    font-size: 5rem;
+    line-height: 4rem;
+  }
+  #skills .filter-button {
+    color: #000000;
+    font-weight: 800;
+    border-radius: 2.3rem;
+    cursor: pointer;
+    display: unset;
+    margin: 0 0.5rem 1rem;
+    padding: 0.5rem 0.25rem;
+    text-align: center;
+    width: 21%;
+  }
+  #skills .filter-button:hover {
+    color: #000000;
+    letter-spacing: 0.10rem;
+  }
+  #skills input[type="radio"]:checked + .filter-button {
+    color: crimson;
+    font-weight: 1000;
+     box-shadow:  var(--inner-shadow);
+  }
+  #skills input[id="framework"]:checked ~ .skill-knowleadge div[skill-type="language"],
+  #skills input[id="framework"]:checked ~ .skill-knowleadge div[skill-type="tool"],
+  #skills input[id="language"]:checked ~ .skill-knowleadge div[skill-type="framework"],
+  #skills input[id="language"]:checked ~ .skill-knowleadge div[skill-type="tool"],
+  #skills input[id="tool"]:checked ~ .skill-knowleadge div[skill-type="framework"],
+  #skills input[id="tool"]:checked ~ .skill-knowleadge div[skill-type="language"] {
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    width: 0;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Education page design  */
+
+/* ------------------------------------------------------------------------------- */
+
+.edu-section .edu-text h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--text-black-900);
+    margin: 0;
+}
+
+
+.timeline-wrapper .timeline {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+}
+  .timeline-wrapper .timeline:before {
+    background: linear-gradient(
+      180deg,
+      #2e2e2e 0,
+      #2e2e2e 8%,
+      #2e2e2e 92%,
+      #2e2e2e
+    );
+    content: " ";
+    height: 100%;
+    left: 50%;
+    margin-left: -0.0675rem;
+    position: absolute;
+    width: 0.250rem;
+    z-index: -1;
+  }
+  .timeline-wrapper .timeline li {
+    padding: 1rem 0;
+  }
+  .timeline-wrapper .hexagon {
+    background: crimson;
+    height: 0.5rem;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    top: -0.8rem;
+    width: 1rem;
+  }
+  .timeline-wrapper .hexagon:after,
+  .timeline-wrapper .hexagon:before {
+    border-left: 2rem solid transparent;
+    border-right: 2rem solid transparent;
+    border-left-width: 0.5rem;
+    border-right-width: 0.5rem;
+    content: "";
+    left: 0;
+    position: absolute;
+  }
+  .timeline-wrapper .hexagon:before {
+    border-bottom: 0.25rem solid crimson;
+    top: -0.25rem;
+  }
+  .timeline-wrapper .hexagon:after {
+    border-top: 0.25rem solid crimson;
+    bottom: -0.25rem;
+  }
+  .timeline-wrapper .flag-wrapper {
+    position: relative;
+    text-align: center;
+  }
+  .timeline-wrapper .flag {
+    border-radius: 0.5rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    box-shadow: var(--outer-shadow);    
+  }
+  .timeline-wrapper .flag span {
+    position: relative;
+    transition: 0.4s;
+  }
+  .timeline-wrapper .flag span:after {
+    content: "\226B";
+    color: crimson;
+    position: absolute;
+    opacity: 0;
+    right: -1rem;
+    transition: 0.4s;
+  }
+  .timeline-wrapper .flag:hover span {
+    color: crimson;
+    letter-spacing: 0.05rem;
+    padding-right: 1.25rem;
+  }
+  .timeline-wrapper .flag:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .timeline-wrapper .time-wrapper {
+    color: #000000;
+    display: block;
+    line-height: 0.5rem;
+    margin-top: 0.3rem;
+  }
+  .timeline-wrapper .time {
+    background: #696969;
+    border-radius: 0.5rem;
+    display: inline-block;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding: 0.6rem;
+  }
+  .timeline-wrapper .desc {
+    background: #f0f0f0;
+    border-radius: 1rem;
+    margin: 1em 0 0;
+    padding: 0.75em;
+    text-align: center;
+  }
+.timeline-wrapper .timeline {
+    margin: 0 auto;
+    width: 55.25rem;
+}
+.timeline-wrapper .timeline li:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.timeline-wrapper .direction-l {
+    float: left;
+    text-align: right;
+    width: 26.5rem;
+}
+.timeline-wrapper .direction-l .hexagon {
+    left: auto;
+    right: -1.6rem;
+    top: 0.4rem;
+}
+.timeline-wrapper .direction-l .flag-wrapper {
+    display: inline-block;
+    text-align: right;
+}
+.timeline-wrapper .direction-l .time-wrapper {
+    float: left;
+    margin-top: -0.1rem;
+}
+.timeline-wrapper .direction-l .desc {
+    text-align: right;
+}
+.timeline-wrapper .direction-r {
+    float: right;
+    text-align: left;
+    width: 26.5rem;
+}
+.timeline-wrapper .direction-r .hexagon {
+    left: -1.6rem;
+    right: auto;
+    top: 0.4rem;
+}
+.timeline-wrapper .direction-r .flag-wrapper {
+    display: inline-block;
+    text-align: left;
+}
+.timeline-wrapper .direction-r .time-wrapper {
+    float: right;
+    margin-top: -0.1rem;
+}
+.timeline-wrapper .direction-r .desc {
+    text-align: left;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+/* contact design */
+
+/* --------------------------------------------------------------------------------- */
+.contact-text .contact-top h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--text-black-900);
+    margin: 0;
+}
+.contact-text .social-media {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-text .social-media a{
+    display: inline;
+    font-size: 55px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: crimson;
+    margin: 0 10px;
+    transition: 0.4s linear;
+}

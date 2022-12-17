@@ -1,0 +1,136 @@
+<!-- <section id="skills-section" class="section skills-section">
+        <div class="container">
+            <div id="skills">
+                <input type="radio" id="all" name="filter" checked />
+                <label class="filter-button neumorphism-button" for="all">All</label>
+                <input type="radio" id="language" name="filter" />
+                <label class="filter-button neumorphism-button" for="language">Languages</label>
+                <input type="radio" id="tool" name="filter" />
+                <label class="filter-button neumorphism-button" for="tool">Tools</label>
+                <input type="radio" id="framework" name="filter" />
+                <label class="filter-button neumorphism-button" for="framework">Cloud and Frameworks</label>
+
+                <div skill-type="language" skill-weight="5" data-aos="zoom-in">
+                    Java
+                </div>
+
+                <div skill-type="language" skill-weight="4" data-aos="zoom-in">
+                    Python
+                </div>
+
+                <div skill-type="language" skill-weight="1" data-aos="zoom-in">
+                    C
+                </div>
+
+                <div skill-type="language" skill-weight="3" data-aos="zoom-in">
+                    HTML5
+                </div>
+
+                <div skill-type="language" skill-weight="2" data-aos="zoom-in">
+                    CSS3
+                </div>
+
+                <div skill-type="language" skill-weight="3" data-aos="zoom-in">
+                    C++
+                </div>
+
+                <div skill-type="language" skill-weight="1" data-aos="zoom-in">
+                    Javascript
+                </div>
+
+
+                <div skill-type="tool" skill-weight="3" data-aos="zoom-in">
+                    GitHub
+                </div>
+
+                <div skill-type="tool" skill-weight="5" data-aos="zoom-in">
+                    Git
+                </div>
+
+                <div skill-type="tool" skill-weight="3" data-aos="zoom-in">
+                    Bash & ZSH
+                </div>
+
+                <div skill-type="tool" skill-weight="1" data-aos="zoom-in">
+                    Scrum
+                </div>
+
+                <div skill-type="tool" skill-weight="2" data-aos="zoom-in">
+                    VScode
+                </div>
+
+                <div skill-type="tool" skill-weight="1" data-aos="zoom-in">
+                    Jenkins
+                </div>
+
+                <div skill-type="tool" skill-weight="1" data-aos="zoom-in">
+                    Docker
+                </div>
+
+                <div skill-type="tool" skill-weight="5" data-aos="zoom-in">
+                    Kubernetes
+                </div>
+
+                <div skill-type="tool" skill-weight="3" data-aos="zoom-in">
+                    Hadoop HDFS
+                </div>
+
+                <div skill-type="tool" skill-weight="2" data-aos="zoom-in">
+                    Hive
+                </div>
+
+                <div skill-type="tool" skill-weight="3" data-aos="zoom-in">
+                    Kafka
+                </div>
+
+                <div skill-type="tool" skill-weight="1" data-aos="zoom-in">
+                    MapReduce
+                </div>
+
+                <div skill-type="tool" skill-weight="3" data-aos="zoom-in">
+                    Spark Streaming
+                </div>
+
+                <div skill-type="tool" skill-weight="4" data-aos="zoom-in">
+                    Spark SQL
+                </div>
+
+
+                <div skill-type="framework" skill-weight="5" data-aos="zoom-in">
+                    AWS
+                </div>
+
+                <div skill-type="framework" skill-weight="3" data-aos="zoom-in">
+                    Google Cloud
+                </div>
+
+                <div skill-type="framework" skill-weight="4" data-aos="zoom-in">
+                    React
+                </div>
+
+                <div skill-type="framework" skill-weight="1" data-aos="zoom-in">
+                    Node
+                </div>
+
+                <div skill-type="framework" skill-weight="2" data-aos="zoom-in">
+                    SpringBoot
+                </div>
+
+                <div skill-type="framework" skill-weight="3" data-aos="zoom-in">
+                    Linux / Unix
+                </div>
+
+                <div skill-type="framework" skill-weight="1" data-aos="zoom-in">
+                    Spring
+                </div>
+
+                <div skill-type="framework" skill-weight="3" data-aos="zoom-in">
+                    Data Engineering
+                </div>
+
+                <div skill-type="framework" skill-weight="5" data-aos="zoom-in">
+                    ETL
+                </div>
+            </div>
+        </div>
+    </section> -->
