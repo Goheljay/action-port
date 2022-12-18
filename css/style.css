@@ -534,6 +534,20 @@ img{
     margin: 0;
 }
 
+.edu-section .edu-text p{
+    color: var(--text-black-300);
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.edu-section .edu-text p span a{
+    color: crimson !important;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
 
 .timeline-wrapper .timeline {
     list-style-type: none;
